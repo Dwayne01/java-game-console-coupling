@@ -1,8 +1,15 @@
 package com.mintetemple.com.learnspringframework.game;
 
+import com.mintetemple.com.learnspringframework.GamingConsole;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class GameRunner {
-    MarioGame game;
-    public GameRunner(MarioGame game) {
+
+    @Autowired
+    private GamingConsole game;
+    public GameRunner(GamingConsole game) {
         this.game = game;
     }
 
